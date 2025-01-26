@@ -37,11 +37,12 @@ export function addTask(){
  */
 
 export function deleteTask(){
-    document.addEventListener('click', (e) => {
-        if (e.target && e.target.classList.contains('bi-trash')) {
-            console.log('Hello World');
-            node.parentNode.removeChild(node);
-        }
+    const btn_del = document.querySelectorAll('.bi-trash')
+    btn_del.forEach(trash => {
+         trash.addEventListener('click', (e)=>{
+            const li_parent = e.target.parentElement.parentElement
+            li_parent.remove()
+         })
     });
 }
 
