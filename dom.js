@@ -17,6 +17,7 @@ export function displayTask(todos) {
         </label>
     `;
     wrappers.appendChild(newli);
+    deleteTask();
 }
 
 /**
